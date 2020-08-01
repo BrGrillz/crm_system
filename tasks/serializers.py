@@ -1,20 +1,20 @@
 from rest_framework import serializers
-from .models import TasksView
+from .models import Tasks
 
 
-class TaskViewSerializer(serializers.ModelSerializer):
+class TaskCreateViewSerializer(serializers.ModelSerializer):
     class Meta:
-        model = TasksView
+        model = Tasks
         fields = '__all__'
 
 
-class TaskViewListSerializer(serializers.ModelSerializer):
+class TaskListViewSerializer(serializers.ModelSerializer):
     class Meta:
-        model = TasksView
-        fields = 'name', 'description', 'createdate', 'untiltime', 'author', 'recipient', 'status'
+        model = Tasks
+        fields = '__all__'
 
 
-class TaskViewChangeSerializer(serializers.ModelSerializer):
+class TaskChangeViewSerializer(serializers.ModelSerializer):
     class Meta:
-        model = TasksView
-        fields = 'name', 'description', 'untiltime', 'recipient', 'status'
+        model = Tasks
+        fields = 'name', 'description', 'until_time', 'recipient', 'status', 'file'

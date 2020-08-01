@@ -18,3 +18,4 @@ local_settings.py
 !*backend/*/migrations
 !*backend/*/migrations/__init__.py
 media/
+documents/

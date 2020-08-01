@@ -17,6 +17,7 @@ class CreateUserAPIView(generics.GenericAPIView):
             user_data = serializer.data
             user = User.objects.get(email=user_data['email'])
             password = Util.create_random_password()
+            print(password)
             email_body = 'Ваш пароль для входа \n' + password
             data = {'email_body': email_body, 'to_email': user.email, 'email_subject': 'Получение пароля'}
             Util.send_email(data)

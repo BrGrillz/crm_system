@@ -19,5 +19,5 @@ class Util:
 
     @staticmethod
     def get_encrypted_password():
-        password = make_password(Util.create_random_password(), salt=None, hasher='default')
-        return password
+        encrypted_password = make_password(Util.create_random_password(), salt=None, hasher='default')
+        return encrypted_password
