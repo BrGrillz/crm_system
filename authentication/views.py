@@ -27,7 +27,7 @@ class CreateUserAPIView(generics.GenericAPIView):
 
 class UsersListAPIView(generics.ListAPIView):
     serializer_class = UsersListSerializer
-    queryset = User.objects.all()
+    queryset = User.objects.all().order_by('id')
     permission_classes = (IsAdminUser,)
 
 
