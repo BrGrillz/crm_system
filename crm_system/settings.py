@@ -15,6 +15,9 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+
+CORS_ORIGIN_ALLOW_ALL = True
+
 AUTH_USER_MODEL = 'authentication.CustomUser'
 
 EMAIL_HOST = 'smtp.gmail.com'
@@ -37,6 +40,7 @@ INSTALLED_APPS = [
     'authentication',
     'tasks',
     'django_filters',
+    'corsheaders',
 ]
 
 REST_FRAMEWORK = {
@@ -58,6 +62,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',

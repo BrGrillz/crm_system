@@ -69,6 +69,9 @@ class CommentCreateView(generics.CreateAPIView):
     queryset = Comments.objects.all()
     permission_classes = (IsAuthenticated, IsOwnerOrReadOnly)
 
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)
+
 
 class ChangeStatusView(generics.UpdateAPIView):
     serializer_class = StatusChangeSerializer

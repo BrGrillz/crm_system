@@ -8,7 +8,7 @@ User = get_user_model()
 class CommentsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comments
-        fields = '__all__'
+        fields = 'comment', 'file', 'task'
 
 
 class TaskCreateViewSerializer(serializers.ModelSerializer):
