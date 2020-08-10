@@ -58,7 +58,7 @@ class TaskEditView(generics.UpdateAPIView):
     permission_classes = (IsAuthenticated, IsOwnerOrReadOnly)
 
 
-class TaskDetailView(generics.ListAPIView):
+class TaskDetailView(generics.RetrieveAPIView):
     serializer_class = TaskDetailViewSerializer
     queryset = Tasks.objects.all()
     permission_classes = (IsAuthenticated, IsOwnerOrReadOnly)
