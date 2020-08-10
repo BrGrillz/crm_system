@@ -9,5 +9,5 @@ urlpatterns = [
     path('token/refresh/', TokenRefreshView.as_view(), name='refresh-token'),
     path('token/verify/', TokenVerifyView.as_view(), name='token-verify'),
     path('list/', UsersListAPIView.as_view(), name='User list'),
-    path('change/<int:pk>/', UserChangeAPIView.as_view(), name='User change'),
+    path('manage/<int:pk>/', UserChangeAPIView.as_view(), name='User manage'),
 ]

@@ -25,4 +25,3 @@ urlpatterns = [
     path('tasks/', include('tasks.urls'), name='tasks'),
     path('', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ]
-

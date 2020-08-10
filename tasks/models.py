@@ -17,9 +17,9 @@ class Tasks(models.Model):
     description = models.TextField(_('Описание задачи'), max_length=500)
     create_date = models.DateTimeField(_('Дата создания'), auto_now_add=True)
     due_date = models.DateTimeField(_('Срок выполнения'))
-    author = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
-    responsible = models.ForeignKey(User, null=True, related_name='responsible', on_delete=models.SET_NULL)
-    observer = models.ManyToManyField(User, related_name='observer')
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    responsible = models.ForeignKey(User, related_name='responsible', on_delete=models.CASCADE)
+    observer = models.ManyToManyField(User, related_name='observer', null=True)
     file = models.FileField(upload_to='documents', default=None)
     status = models.CharField(_('Статус'), max_length=20, choices=STATUS_CHOISES, default='Ожидает выполнения')
 

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Tasks, Comments, STATUS_CHOISES
+from .models import Tasks, Comments
 from django.contrib.auth import get_user_model
 
 User = get_user_model()
