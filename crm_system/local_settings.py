@@ -1,7 +1,7 @@
 import os
 from datetime import timedelta
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 SECRET_KEY = 'd)ys9mw=2s@e!=dunk7h-y@8_mra^0iwlu5mer+h4s*n&d(^9k'
@@ -50,4 +50,5 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
 
-STATIC_DIR = os.path.join(BASE_DIR, 'static')
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')

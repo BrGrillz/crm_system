@@ -1,1 +1,1 @@
-web: gunicorn projectname.wsgi --log-file -
+web: gunicorn crm_system.wsgi --log-file -
