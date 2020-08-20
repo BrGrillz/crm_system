@@ -10,7 +10,7 @@ SECRET_KEY = 'd)ys9mw=2s@e!=dunk7h-y@8_mra^0iwlu5mer+h4s*n&d(^9k'
 DEBUG = True
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['crm-system-aegis.herokuapp.com']
 
 
 DATABASES = {
