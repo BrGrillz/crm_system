@@ -10,7 +10,6 @@ build/
 db.sqlite3
 dist/
 prod_settings.py
-local_settings.py
 **/migrations/**
 !**/migrations
 !**/migrations/__init__.py
