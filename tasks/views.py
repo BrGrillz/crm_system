@@ -1,6 +1,7 @@
 from django.contrib.auth import get_user_model
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import generics
+from authentication.serializers import UsersListSerializer
 from .permissions import IsOwnerOrReadOnly
 from .serializers import (
     TaskCreateViewSerializer,
